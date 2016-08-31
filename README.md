@@ -8,4 +8,6 @@ tceles generates JavaScript for you to select a certain DOM element. I came up w
 
 ## usage
 
-After importing tceles, run `tceles(domElement)` with `domElement` being the element you want to find a path for
+After importing tceles, run `tceles(domElement)` with `domElement` being the element you want to find a path for.
+
+Right now you're probably thinking, "wait, Matthew, don't I need to find a way to select the element to input it into the tceles method?". Yes! All you need to do is give your desired element an id via the chrome console, run `var myElement = document.getElementById(yourId)`, remove the id you artificially added to your element, and run `tceles(myElement)`. This will then give you a way to access the element with pure JavaScript, without needing to manipulate your element in the chrome console. 
