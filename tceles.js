@@ -18,12 +18,10 @@ function tceles(domElement){
 
 	}
 
-	var result = ""
+	var result = "document.body"
 
 	if(currentElement.id != "")
-		result += "document.getElementById('" + currentElement.id + "')"
-	else
-		result += "document.body"
+		result = "document.getElementById('" + currentElement.id + "')"
 
 	for(var i = 0; i < childIndices.length; i++)
 		result += ".childNodes[" + childIndices[i] + "]"
@@ -40,8 +38,7 @@ function areWeThereYet(domElement){
 function findDomElementIndex(domElement){
 	var el = domElement
 	var elementIndex = 0
-	while(el.previousSibling){
-		el = el.previousSibling
+	while(el = el.previousSibling){
 		elementIndex++
 	}
 
